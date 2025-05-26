@@ -1,0 +1,134 @@
+**Mod/Game Design Document: Societal AI Simulator for Minecraft**
+
+---
+
+### **1. Overview**
+
+**Title:** Societal AI Simulator
+**Genre:** Simulation / RPG / Strategy
+**Platform:** Minecraft (Forge or Fabric mod)
+
+**Summary:**
+A complex societal simulator embedded in the Minecraft world where the player and AI-driven NPCs live together in evolving societies. NPCs have ambitions, jobs, property, income, and react to player choices. The player can rise through the ranks, from a homeless citizen to a political leader or influential landowner, affecting the lives of others dynamically.
+
+---
+
+### **2. Core Gameplay Concepts**
+
+* **NPCs With Depth:** Every NPC has:
+
+  * A name, personality traits, profession, political views, social class, and ambitions.
+  * Needs (food, shelter, income, socialization) and relationships.
+
+* **Economic System:**
+
+  * Currency system (e.g., Gold Coins).
+  * Jobs (farmer, miner, merchant, blacksmith, guard, bureaucrat, etc.).
+  * Wages, property costs, goods prices fluctuate with supply and demand.
+  * Taxes based on your location and status.
+
+* **Property Ownership:**
+
+  * Land and buildings can be owned by players and NPCs.
+  * You can rent, lease, or sell properties.
+  * Owning property can grant voting rights or political power in some regions.
+
+* **Social Mobility:**
+
+  * Grow from homeless to wealthy citizen, property mogul, or mayor.
+  * Education, reputation, and influence matter for progression.
+
+* **Politics & Government:**
+
+  * Different cities or countries have different systems (democracy, monarchy, oligarchy).
+  * Elections, appointments, or inheritance determine leadership.
+  * Policies affect taxes, jobs, security, freedoms.
+  * Players can campaign, join political parties, bribe, or manipulate.
+
+* **Dynamic Society:**
+
+  * NPCs can lose jobs, go bankrupt, get promoted, or start businesses.
+  * Crime and punishment system: theft, corruption, jailing.
+  * Black markets and underground societies can emerge.
+
+* **Countries and Regions:**
+
+  * World is divided into multiple countries or autonomous regions.
+  * Each region has its own laws, language (optional flavor), economy.
+  * Trade and diplomacy between regions (wars, alliances, embargoes).
+
+---
+
+### **3. Player Mechanics**
+
+* **Character Progression:**
+
+  * Skills: negotiation, construction, leadership, etc.
+  * Reputation: tracked separately for each faction/society.
+  * Assets: money, businesses, land, influence.
+
+* **Daily Life:**
+
+  * Work at a job or start a business.
+  * Interact with NPCs (dialogue tree system).
+  * Pay taxes, upgrade home, buy/sell goods.
+
+* **Influence Systems:**
+
+  * Affect local economy by trade.
+  * Influence NPCs through persuasion, threats, bribery.
+  * Lead protests, run campaigns, propose policies.
+
+---
+
+### **4. AI Behavior Model**
+
+* **Needs-based System:**
+
+  * NPCs act based on needs and goals (Maslow-like hierarchy).
+  * If poor, may steal or beg. If rich, may run for office.
+
+* **Memory & Relationships:**
+
+  * NPCs remember player actions (generosity, crimes, deals).
+  * Form friendships, rivalries, grudges.
+
+* **Social Interactions:**
+
+  * NPCs can form families, communities, factions.
+  * Rumors spread: a corrupt act may damage your reputation indirectly.
+
+* **Autonomous Decision-Making:**
+
+  * NPCs change jobs, migrate, revolt based on environment.
+  * Factions can split or merge. Revolutions and civil wars possible.
+
+---
+
+### **5. Technical Requirements**
+
+* **Persistent World State:**
+
+  * Save/load data on economy, ownership, relationships.
+  * Use SQLite or JSON-based system for NPC states.
+
+* **UI Systems:**
+
+  * HUD elements for income, reputation, influence.
+  * Menus for job board, property listings, voting system.
+
+* **Performance Considerations:**
+
+  * Use behavior trees and LOD simulation: distant NPCs use simplified logic.
+  * Dynamic chunk loading based on society centers.
+
+---
+
+### **6. Expansion Ideas**
+
+* Multiplayer compatibility (players in the same society or different countries).
+* Religion and cultural belief systems.
+* Education, healthcare, and urban planning systems.
+* Catastrophic events (economic crisis, pandemics, natural disasters).
+
+---
